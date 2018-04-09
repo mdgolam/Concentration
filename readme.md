@@ -8,8 +8,11 @@ Besides the original task, you'll notice **improved layout with square cards, ca
 
 # Pics
 ![Icon
-](https://pp.userapi.com/c846124/v846124009/1ea9e/sBeafjf0uu4.jpg)
+](https://pp.userapi.com/c846124/v846124009/1ea9e/sBeafjf0uu4.jpg =250x)
+AppStore icon
 
-![enter image description here](https://pp.userapi.com/c846124/v846124009/1ea8b/Itm_pRIjNxM.jpg)
 
-![enter image description here](https://pp.userapi.com/c846124/v846124009/1ea95/2vCiCz2y5Yo.jpg)
+Gameplay             |  Final screen
+:-------------------------:|:-------------------------:
+![](https://pp.userapi.com/c846124/v846124009/1ea8b/Itm_pRIjNxM.jpg)  |  ![](https://pp.userapi.com/c846124/v846124009/1ea95/2vCiCz2y5Yo.jpg)
+```
