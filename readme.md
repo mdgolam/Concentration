@@ -12,6 +12,6 @@ Gameplay             |  Final screen
 :-------------------------:|:-------------------------:
 ![](https://pp.userapi.com/c846124/v846124009/1ea8b/Itm_pRIjNxM.jpg)  |  ![](https://pp.userapi.com/c846124/v846124009/1ea95/2vCiCz2y5Yo.jpg)
 
-AppStore icon
+AppStore icon |  On the homescreen
 :-------------------------:|:-------------------------:
 ![](https://pp.userapi.com/c846124/v846124009/1ea9e/sBeafjf0uu4.jpg)  |  ![](https://pp.userapi.com/c846124/v846124009/1ea81/tJmMfrV-I2I.jpg)
