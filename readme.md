@@ -8,7 +8,7 @@ Besides the original task, you'll notice **improved layout with square cards, ca
 
 # Pics
 ![Icon
-](https://pp.userapi.com/c846124/v846124009/1ea9e/sBeafjf0uu4.jpg =250x)
+](https://pp.userapi.com/c846124/v846124009/1ea9e/sBeafjf0uu4.jpg =250x250)
 AppStore icon
 
 
