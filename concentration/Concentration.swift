@@ -11,6 +11,9 @@ import Foundation
 struct Concentration
 {
  
+    // TODO: write the best score ever into file
+    // change the icon
+    
     private(set) var cards = [Card]()
     var isWon: Bool {
         return cards.indices.filter( { cards[$0].isMatched } ).count == cards.count
@@ -32,9 +35,9 @@ struct Concentration
     }
     
     private struct Points {
-        static let matchBonus = 10
-        static let missMatchPenalty = 6
-        static let maxTimePenalty = 10
+        static let matchBonus = 20
+        static let missMatchPenalty = 4
+        static let maxTimePenalty = 4
     }
     
     var lastClick: Date?
@@ -60,12 +63,13 @@ struct Concentration
     var cardsToTurn: Array<Int> {
         return cards.indices.filter( { cards[$0].isFaceUp } )
     }
-    
-//    mutating func turningCardsDown() {
-//        for index in cards.indices.filter( { cards[$0].isFaceUp } ) {
-//            cards[index].isFaceUp = false
-//        }
-//    }
+
+    mutating func rotateCards() {
+//        assert(shouldTurnCards)
+        for index in cardsToTurn {
+            cards[index].isFaceUp = false
+        }
+    }
     
     mutating func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
