@@ -36,7 +36,7 @@ struct Concentration
     
     private struct Points {
         static let matchBonus = 20
-        static let missMatchPenalty = 4
+        static let missMatchPenalty = 3
         static let maxTimePenalty = 4
     }
     
@@ -56,21 +56,6 @@ struct Concentration
         }
     }
     
-    var shouldTurnCards: Bool {
-        return cards.filter( { $0.isFaceUp } ).count == 2
-    }
-    
-    var cardsToTurn: Array<Int> {
-        return cards.indices.filter( { cards[$0].isFaceUp } )
-    }
-
-    mutating func rotateCards() {
-//        assert(shouldTurnCards)
-        for index in cardsToTurn {
-            cards[index].isFaceUp = false
-        }
-    }
-    
     mutating func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         flipCount += 1
@@ -83,11 +68,12 @@ struct Concentration
                 } else {
                     if seenCards.contains(index) {
                         scoreCount = max(0, scoreCount - Points.missMatchPenalty)
+                        scoreCount = max(0, scoreCount - timePenalty)
                     }
                     if seenCards.contains(matchIndex) {
                         scoreCount = max(0, scoreCount - Points.missMatchPenalty)
+                        scoreCount = max(0, scoreCount - timePenalty)
                     }
-                    scoreCount = max(0, scoreCount - timePenalty)
                 }
                     seenCards.insert(index)
                     seenCards.insert(matchIndex)
