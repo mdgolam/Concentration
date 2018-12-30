@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
     var numberOfPairsOfCards: Int {
@@ -43,7 +47,7 @@ class ViewController: UIViewController {
             let button = cardButtons[index]
             let card = game.cards[index]
             if card.isFaceUp {
-                button.setTitle(emoji(for: card), for: UIControlState.normal)
+                button.setTitle(emoji(for: card), for: UIControl.State.normal)
                 button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             } else {
                     self.turnCardDown(on: button, and: card)
@@ -68,11 +72,11 @@ class ViewController: UIViewController {
     
     private func turnCardDown(on button: UIButton, and card: Card) {
         button.backgroundColor = card.isMatched ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) : self.cardBackColor
-        button.setTitle("", for: UIControlState.normal)
+        button.setTitle("", for: UIControl.State.normal)
     }
     
     private func updateFlipCountLabel() {
-        let attributes: [NSAttributedStringKey:Any] = [:]
+        let attributes: [NSAttributedString.Key:Any] = [:]
         let attributedString = NSAttributedString(string: "Flips: \(game.flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributedString
     }
@@ -133,6 +137,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNeedsStatusBarAppearanceUpdate()
         themeChoice = Int(arc4random_uniform(UInt32(keys.count)))
         updateViewFromModel()
     }
