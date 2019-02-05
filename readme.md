@@ -1,6 +1,6 @@
 # Concentration game
 
-Hello! This project is the improved version of the first home assignment from the Stanford's [«Developing iOS 11 Apps with Swift»](https://itunes.apple.com/us/course/developing-ios-11-apps-with-swift/id1309275316) course.
+This project is the improved version of the first home assignment from the Stanford's [«Developing iOS 11 Apps with Swift»](https://itunes.apple.com/us/course/developing-ios-11-apps-with-swift/id1309275316) course. *Both required and extra credit tasks are done*
 
 ## Features
 
